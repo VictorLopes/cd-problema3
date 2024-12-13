@@ -1,0 +1,10 @@
+module DecNumAndares(
+	input A,
+	input B,
+	reg [8:0] display
+);
+	
+	
+
+
+endmodule

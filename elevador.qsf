@@ -1,0 +1,96 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+# Date created = 17:46:31  December 03, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		elevador_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "MAX II"
+set_global_assignment -name DEVICE EPM240T100C5
+set_global_assignment -name TOP_LEVEL_ENTITY Main
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:46:31  DECEMBER 03, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
+set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
+set_location_assignment PIN_12 -to clk
+set_location_assignment PIN_98 -to disp[3]
+set_location_assignment PIN_90 -to disp[0]
+set_location_assignment PIN_70 -to disp[1]
+set_location_assignment PIN_41 -to disp[2]
+set_location_assignment PIN_100 -to disp[4]
+set_location_assignment PIN_92 -to disp[5]
+set_location_assignment PIN_39 -to disp[6]
+set_location_assignment PIN_96 -to disp[7]
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
+set_global_assignment -name VERILOG_FILE Pessoas.v
+set_global_assignment -name VERILOG_FILE Main.v
+set_global_assignment -name VERILOG_FILE DivisorClock.v
+set_global_assignment -name VERILOG_FILE DecNumPessoas.v
+set_global_assignment -name VERILOG_FILE DecNumAndares.v
+set_global_assignment -name VERILOG_FILE Multiplex_disp.v
+set_global_assignment -name VERILOG_FILE DecSeletor.v
+set_location_assignment PIN_88 -to Y[0]
+set_location_assignment PIN_66 -to Y[1]
+set_location_assignment PIN_68 -to Y[2]
+set_location_assignment PIN_37 -to Y[3]
+set_global_assignment -name VERILOG_FILE DivisorClock1.v
+set_location_assignment PIN_44 -to reset0
+set_global_assignment -name VERILOG_FILE Andar.v
+set_global_assignment -name VERILOG_FILE Porta.v
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name VERILOG_FILE Chamada.v
+set_location_assignment PIN_38 -to AE1
+set_location_assignment PIN_40 -to AE2
+set_location_assignment PIN_42 -to AE3
+set_location_assignment PIN_30 -to AI1
+set_location_assignment PIN_34 -to AI2
+set_location_assignment PIN_36 -to AI3
+set_location_assignment PIN_76 -to C
+set_global_assignment -name VERILOG_FILE Elevador.v
+set_location_assignment PIN_54 -to P
+set_location_assignment PIN_61 -to port[3]
+set_location_assignment PIN_67 -to port[2]
+set_location_assignment PIN_69 -to port[1]
+set_location_assignment PIN_71 -to port[0]
+set_location_assignment PIN_52 -to B1
+set_location_assignment PIN_50 -to B2
+set_location_assignment PIN_55 -to saidaMot[0]
+set_location_assignment PIN_57 -to saidaMot[1]

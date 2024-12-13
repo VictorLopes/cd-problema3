@@ -1,0 +1,291 @@
+|Main
+clk => clk.IN2
+AI1 => AI1.IN1
+AI2 => AI2.IN1
+AI3 => AI3.IN1
+AE1 => AE1.IN1
+AE2 => AE2.IN1
+AE3 => AE3.IN1
+B1 => B1.IN1
+B2 => B2.IN1
+reset0 => reset0.IN4
+disp[0] << Multiplex_disp:multiplexe.port6
+disp[1] << Multiplex_disp:multiplexe.port6
+disp[2] << Multiplex_disp:multiplexe.port6
+disp[3] << Multiplex_disp:multiplexe.port6
+disp[4] << Multiplex_disp:multiplexe.port6
+disp[5] << Multiplex_disp:multiplexe.port6
+disp[6] << Multiplex_disp:multiplexe.port6
+disp[7] << Multiplex_disp:multiplexe.port6
+Y[0] << DecSeletor:selciona.port1
+Y[1] << DecSeletor:selciona.port1
+Y[2] << DecSeletor:selciona.port1
+Y[3] << DecSeletor:selciona.port1
+C << C.DB_MAX_OUTPUT_PORT_TYPE
+P << P.DB_MAX_OUTPUT_PORT_TYPE
+port[0] << Porta:porta.port8
+port[1] << Porta:porta.port8
+port[2] << Porta:porta.port8
+port[3] << Porta:porta.port8
+saidaMot[0] << Andar:andar.port6
+saidaMot[1] << Andar:andar.port6
+
+
+|Main|Chamada:chamada
+AI0 => A0.IN0
+AI1 => A1.IN0
+AI2 => A2.IN0
+AE0 => A0.IN1
+AE1 => A1.IN1
+AE2 => A2.IN1
+A0 <= A0.DB_MAX_OUTPUT_PORT_TYPE
+A1 <= A1.DB_MAX_OUTPUT_PORT_TYPE
+A2 <= A2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|DivisorClock:divisor1s
+clock_in => clock_out~reg0.CLK
+clock_in => counter[0].CLK
+clock_in => counter[1].CLK
+clock_in => counter[2].CLK
+clock_in => counter[3].CLK
+clock_in => counter[4].CLK
+clock_in => counter[5].CLK
+clock_in => counter[6].CLK
+clock_in => counter[7].CLK
+clock_in => counter[8].CLK
+clock_in => counter[9].CLK
+clock_in => counter[10].CLK
+clock_in => counter[11].CLK
+clock_in => counter[12].CLK
+clock_in => counter[13].CLK
+clock_in => counter[14].CLK
+clock_in => counter[15].CLK
+clock_in => counter[16].CLK
+clock_in => counter[17].CLK
+clock_in => counter[18].CLK
+clock_in => counter[19].CLK
+clock_in => counter[20].CLK
+clock_in => counter[21].CLK
+clock_in => counter[22].CLK
+clock_in => counter[23].CLK
+clock_in => counter[24].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|DivisorClock1:fazmux
+clock_in => clock_out~reg0.CLK
+clock_in => counter[0].CLK
+clock_in => counter[1].CLK
+clock_in => counter[2].CLK
+clock_in => counter[3].CLK
+clock_in => counter[4].CLK
+clock_in => counter[5].CLK
+clock_in => counter[6].CLK
+clock_in => counter[7].CLK
+clock_in => counter[8].CLK
+clock_in => counter[9].CLK
+clock_in => counter[10].CLK
+clock_in => counter[11].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|Andar:andar
+P => always1.IN1
+P => always1.IN1
+P => always1.IN1
+P => always1.IN1
+P => always1.IN1
+P => always1.IN1
+A0 => always1.IN0
+A0 => always1.IN0
+A0 => always1.IN0
+A0 => always1.IN0
+A1 => always1.IN1
+A1 => always1.IN1
+A1 => always1.IN1
+A1 => always1.IN1
+A2 => always1.IN1
+A2 => always1.IN1
+A2 => always1.IN1
+A2 => always1.IN1
+A2 => always1.IN1
+A2 => always1.IN1
+clk => state~1.DATAIN
+reset => state~3.DATAIN
+mot[0] <= mot.DB_MAX_OUTPUT_PORT_TYPE
+mot[1] <= mot.DB_MAX_OUTPUT_PORT_TYPE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|Elevador:elevador
+A0 => always1.IN0
+A0 => always1.IN0
+A0 => always1.IN0
+A1 => always1.IN0
+A1 => always1.IN1
+A1 => always1.IN1
+A1 => always1.IN1
+A2 => always1.IN1
+A2 => always1.IN1
+A2 => always1.IN1
+C => always1.IN1
+C => always1.IN1
+C => always1.IN1
+C => always1.IN1
+BA0 => always1.IN0
+BA0 => always1.IN1
+BA0 => always1.IN1
+BA0 => always1.IN0
+BA0 => always1.IN0
+BA1 => always1.IN1
+BA1 => always1.IN1
+BA1 => always1.IN1
+BA1 => always1.IN1
+BA1 => always1.IN1
+clk => state~1.DATAIN
+reset => state~3.DATAIN
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|Porta:porta
+BA0 => always1.IN0
+BA1 => always1.IN0
+BP0 => always1.IN1
+BP1 => always1.IN1
+C => nextstate.DATAA
+C => nextstate.DATAA
+C => always1.IN1
+C => nextstate.DATAA
+C => nextstate.DATAA
+clk => state~1.DATAIN
+reset => state~3.DATAIN
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+saida[0] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|Pessoas:pessoas
+P => always1.IN0
+P => always1.IN0
+B1 => always1.IN1
+B2 => always1.IN1
+clk => state~1.DATAIN
+reset => state~3.DATAIN
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+saida[0] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|DecSeletor:selciona
+S => Y[0].DATAIN
+S => Y[3].DATAIN
+Y[0] <= S.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= <VCC>
+Y[2] <= <VCC>
+Y[3] <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|Multiplex_disp:multiplexe
+clk => anda[0].IN1
+clk => anda[1].IN1
+clk => anda[2].IN1
+clk => anda[3].IN1
+clk => anda[4].IN1
+clk => anda[5].IN1
+clk => anda[6].IN1
+clk => anda[7].IN1
+clk => pessoa[0].IN1
+clk => pessoa[1].IN1
+clk => pessoa[2].IN1
+clk => pessoa[3].IN1
+clk => pessoa[4].IN1
+clk => pessoa[5].IN1
+clk => pessoa[6].IN1
+clk => pessoa[7].IN1
+A => A.IN1
+B => B.IN1
+C => C.IN1
+D => D.IN1
+E => E.IN1
+disp[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+disp[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+disp[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+disp[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+disp[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+disp[5] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+disp[6] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+disp[7] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main|Multiplex_disp:multiplexe|DecNumAndares:andar
+A => comb.IN0
+A => comb.IN0
+A => comb.IN0
+B => comb.IN1
+B => comb.IN1
+B => comb.IN1
+B => disp[2].DATAIN
+B => disp[4].DATAIN
+disp[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+disp[1] <= <GND>
+disp[2] <= B.DB_MAX_OUTPUT_PORT_TYPE
+disp[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+disp[4] <= B.DB_MAX_OUTPUT_PORT_TYPE
+disp[5] <= <VCC>
+disp[6] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+disp[7] <= <VCC>
+
+
+|Main|Multiplex_disp:multiplexe|DecNumPessoas:pessoas
+A => WideAnd0.IN0
+A => WideAnd2.IN0
+A => WideAnd3.IN0
+A => WideAnd5.IN0
+A => WideAnd7.IN0
+A => ande0.IN0
+A => WideAnd8.IN0
+A => WideAnd1.IN0
+A => WideAnd4.IN0
+A => WideAnd6.IN0
+A => andf1.IN0
+A => andf2.IN0
+A => andg0.IN0
+B => WideAnd3.IN1
+B => WideAnd4.IN1
+B => WideAnd7.IN1
+B => andf0.IN0
+B => andf1.IN1
+B => WideAnd8.IN1
+B => WideAnd0.IN1
+B => WideAnd1.IN1
+B => WideAnd2.IN1
+B => WideAnd5.IN1
+B => WideAnd6.IN1
+B => ande0.IN1
+B => andg0.IN1
+C => WideAnd1.IN2
+C => WideAnd2.IN2
+C => WideAnd6.IN2
+C => WideAnd7.IN2
+C => comb.IN1
+C => andf0.IN1
+C => andf2.IN1
+C => WideAnd8.IN2
+C => WideAnd0.IN2
+C => WideAnd3.IN2
+C => WideAnd4.IN2
+C => WideAnd5.IN2
+disp[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+disp[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+disp[2] <= WideAnd4.DB_MAX_OUTPUT_PORT_TYPE
+disp[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+disp[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+disp[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+disp[6] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+disp[7] <= <VCC>
+
+

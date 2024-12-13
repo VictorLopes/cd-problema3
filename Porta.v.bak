@@ -1,0 +1,48 @@
+module Porta(
+	input P, // porta 0 pra fechada e 1 para aberta
+	
+	input A0, // bit andar 0
+	input A1, // bit andar 1
+	
+	input clk, // de um segundo recebendo do divisorclock
+	input reset, // botao B3
+	output [1:0] saida
+);
+	reg [1:0] state, nextstate;
+
+	not(nreset, reset);
+	// state code
+	parameter S0 = 3'b01; // Primeiro andar
+	parameter S1 = 3'b10; // Segundo andar
+	parameter S2 = 3'b11; // Terceiro andar
+
+	// state register
+	always @(posedge clk, posedge nreset)
+	
+	if ( nreset ) state <= S0 ;
+		else state <= nextstate ;
+		// next state logic
+	always @ (*)
+		case (state)
+			S0 : begin if (((A0 & ~A1) || (A0 & A1)) & P) nextstate = S1;
+			else if (((~A0 & ~A1) || (~A0 & A1)) & P) nextstate = S0;
+			else nextstate = S0;
+			end
+			
+			S1 : begin if (A0 & A1 & P) nextstate = S2;
+			else if (A0 & ~A1 & P) nextstate = S1;
+			else if (((~A0 & ~A1) || (~A0 & A1)) & P) nextstate = S0;
+			else nextstate = S1;
+			end
+			
+			S2 : begin if ((A0 & ~A1 || (~A0 & A1) || (~A0 && ~A1)) && P) nextstate = S1; 
+			else if (A0 & A1 & P) nextstate = S2;
+			else nextstate = S2;
+			end
+		endcase
+	
+	// output logic
+	assign saida = state;
+
+	
+	endmodule

@@ -1,0 +1,39 @@
+# do elevador.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:50:54 on Dec 08,2024
+# vlog -work work elevador.vo 
+# -- Compiling module Prioridade
+# 
+# Top level modules:
+# 	Prioridade
+# End time: 16:50:54 on Dec 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:50:54 on Dec 08,2024
+# vlog -work work Prioridade.vwf.vt 
+# -- Compiling module Prioridade_vlg_vec_tst
+# 
+# Top level modules:
+# 	Prioridade_vlg_vec_tst
+# End time: 16:50:54 on Dec 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.Prioridade_vlg_vec_tst 
+# Start time: 16:50:54 on Dec 08,2024
+# Loading work.Prioridade_vlg_vec_tst
+# Loading work.Prioridade
+# Loading maxii_ver.maxii_io
+# Loading maxii_ver.maxii_lcell
+# Loading maxii_ver.maxii_asynch_lcell
+# Loading maxii_ver.maxii_lcell_register
+# SDF 10.5b Compiler 2016.10 Oct  5 2016
+# 
+# Loading instances from elevador_v.sdo
+# Loading timing data from elevador_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /Prioridade_vlg_vec_tst File: Prioridade.vwf.vt
+# after#25
+# ** Note: $finish    : Prioridade.vwf.vt(61)
+#    Time: 1 us  Iteration: 0  Instance: /Prioridade_vlg_vec_tst
+# End time: 16:50:55 on Dec 08,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

@@ -1,0 +1,33 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/vrlop/Downloads/PBL3-20241208T130943Z-001/PBL3/simulation/modelsim
+vPrioridade
+!s110 1733675294
+!i10b 1
+!s100 hY^T2aY>obmT?Pz@CBK>01
+IFhHmFYd@BmSz@^iRlzbn00
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1733673166
+8C:/Users/vrlop/Downloads/PBL3-20241208T130943Z-001/PBL3/Prioridade.v
+FC:/Users/vrlop/Downloads/PBL3-20241208T130943Z-001/PBL3/Prioridade.v
+L0 1
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1733675294.000000
+!s107 C:/Users/vrlop/Downloads/PBL3-20241208T130943Z-001/PBL3/Prioridade.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/vrlop/Downloads/PBL3-20241208T130943Z-001/PBL3|C:/Users/vrlop/Downloads/PBL3-20241208T130943Z-001/PBL3/Prioridade.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/vrlop/Downloads/PBL3-20241208T130943Z-001/PBL3
+tCvgOpt 0
+n@prioridade
